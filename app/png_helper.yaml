@@ -1,0 +1,20 @@
+png_helper:
+  # Compress quality
+  # 0 default/auto
+  # 1-10 customize
+  quality: 0
+
+  # Image path to compress
+  # Relative path to project root(actually this configuration file).
+  # Directory must end with '/'.
+  path:
+    - asset/image/abc.png
+    - asset/image/
+    - path_relative_to_this_yaml_file/
+
+  # Image path to ignore
+  # Relative path to project root(actually this configuration file).
+  # Directory must end with '/'.
+  ignore:
+    - '.9.png'
+    - path_relative_to_this_yaml_file/

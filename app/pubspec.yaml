@@ -1,0 +1,27 @@
+name: app
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  build_runner: ^2.0.0
+  json_serializable: ^6.5.4
+  my_cmd:
+    path: ../my_cmd
+  png_helper:
+    path: ../png_helper
+
+flutter:
+  uses-material-design: true
+
