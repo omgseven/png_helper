@@ -17,10 +17,6 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   build_runner: ^2.0.0
   json_serializable: ^6.5.4
-  my_cmd:
-    path: ../my_cmd
-  png_helper:
-    path: ../png_helper
 
 flutter:
   uses-material-design: true
