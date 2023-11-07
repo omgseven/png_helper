@@ -9,12 +9,6 @@ Install from pub
 flutter pub global activate png_helper
 ```
 
-Install from local(For development)
-go to demo project root directory, and run:
-```shell
-flutter pub global activate --source path ./png_helper
-```
-
 ### Config
 
 Create a `png_helper.yaml` in your project root directory, and write your configuration in it.
