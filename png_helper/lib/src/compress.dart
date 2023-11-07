@@ -63,7 +63,7 @@ class CompressManager {
     }
     /// replace src file with compressed file
     destLength = destFile.lengthSync();
-    if (!_skipByLength(srcLength, destLength)) {
+    if (srcLength > 0 && !_skipByLength(srcLength, destLength)) {
       var compressRate = (1 - destLength / srcLength) * 100;
       log('success compressed ${task.src} ↓ ${compressRate.toStringAsFixed(2)}%');
       Trace.recordCompress(srcLength, destLength);
@@ -75,6 +75,9 @@ class CompressManager {
   }
 
   bool _skipByLength(int srcLength, int destLength) {
+    if (srcLength == 0) {
+      return true;
+    }
     if (destLength == 0) {
       return false;
     }
