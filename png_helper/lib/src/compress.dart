@@ -50,6 +50,9 @@ class CompressManager {
     var srcLength = srcFile.lengthSync();
     var destExist = destFile.existsSync();
     var destLength = destExist ? destFile.lengthSync() : 0;
+    if (srcLength <= 0) {
+      error('invalid src file: ${task.src}');
+    }
     if (_skipByLength(srcLength, destLength)) {
       log('skip compressed ${task.src}');
       Trace.recordSkip();
